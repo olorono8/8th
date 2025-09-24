@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chapter 3 – Questions & Notes</title>
+  <style>
+    body {
+      background-color: #121417;
+      color: #e0f7fa;
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00bcd4;
+    }
+
+    h3 {
+      color: #26c6da;
+      border-bottom: 2px solid #00acc1;
+      padding-bottom: 6px;
+      margin-top: 30px;
+    }
+
+    .section {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00acc1aa;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #00e5ff;
+    }
+
+    .qa {
+      margin-bottom: 20px;
+    }
+
+    .qa p {
+      margin: 6px 0;
+    }
+
+    .question {
+      color: #00e5ff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .answer {
+      color: #e0f7fa;
+      padding-left: 10px;
+    }
+
+    .note-box {
+      background-color: #263238;
+      border-left: 5px solid #00bfa5;
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #00e5ff, #1de9b6);
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 10px 30px 0;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00e5ff;
+    }
+
+    .top-btns {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-btns">
+    <a href="/Users/mdtok/8th_saiba/chapters.html" class="btn">📚 Go to Study Page</a>
+    <a href="day3.html" class="btn">🔙 Back to Chapter</a>
+  </div>
+
+  <h1>Class 8 Science</h1>
+  <h2>Chapter 3 – Fibre to Fabric 🧵</h2>
+
+  <div class="section">
+    <h3>❓ Important Questions and Answers</h3>
+
+    <div class="qa">
+      <p class="question">1. What are natural fibres?</p>
+      <p class="answer">Fibres obtained from plants and animals are called natural fibres. Examples: cotton, wool, silk.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">2. What is the difference between fibre and fabric?</p>
+      <p class="answer">Fibre is a thin thread-like structure, while fabric is a material made by weaving or knitting fibres.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">3. How is cotton fibre obtained?</p>
+      <p class="answer">Cotton fibre is obtained from the seed hairs of the cotton plant.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">4. What is spinning?</p>
+      <p class="answer">Spinning is the process of twisting fibres together to make yarn or thread.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">5. What is weaving?</p>
+      <p class="answer">Weaving is the process of interlacing two sets of yarns at right angles to form fabric.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">6. What are synthetic fibres?</p>
+      <p class="answer">Fibres made by humans using chemicals are synthetic fibres. Example: nylon, polyester.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">7. How is silk obtained?</p>
+      <p class="answer">Silk is obtained from the cocoon of the silkworm.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">8. What is sericulture?</p>
+      <p class="answer">Sericulture is the rearing of silkworms for the production of silk.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">9. Name two animals other than silkworms that provide fibre.</p>
+      <p class="answer">Goat (mohair fibre), Camel (camel hair).</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>📝 Extra Notes / Definitions</h3>
+
+    <div class="note-box"><strong>Fibre:</strong> A thin thread-like structure.</div>
+    <div class="note-box"><strong>Fabric:</strong> Material made by weaving or knitting fibres.</div>
+    <div class="note-box"><strong>Spinning:</strong> Twisting fibres to make yarn or thread.</div>
+    <div class="note-box"><strong>Weaving:</strong> Interlacing yarns to make fabric.</div>
+    <div class="note-box"><strong>Synthetic Fibres:</strong> Man-made fibres from chemicals.</div>
+    <div class="note-box"><strong>Sericulture:</strong> Rearing silkworms for silk production.</div>
+    <div class="note-box"><strong>Natural Fibres:</strong> Fibres from plants or animals.</div>
+    <div class="note-box"><strong>Silkworm:</strong> Larva that produces silk.</div>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button onclick="scrollToTop()" id="topBtn" title="Go to top" class="btn">⬆️ Top</button>
+
+  <script>
+    // Toggle answers on question click
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.querySelectorAll('.qa');
+
+      questions.forEach(qa => {
+        const questionEl = qa.querySelector('.question');
+        const answerEl = qa.querySelector('.answer');
+
+        if (questionEl && answerEl) {
+          answerEl.style.display = 'none'; // Hide initially
+
+          questionEl.addEventListener('click', () => {
+            answerEl.style.display = (answerEl.style.display === 'none') ? 'block' : 'none';
+          });
+        }
+      });
+    });
+
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide scroll-to-top button
+    window.onscroll = function () {
+      const topBtn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>

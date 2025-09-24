@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chapter 4 – Questions & Notes</title>
+  <style>
+    body {
+      background-color: #121417;
+      color: #e0f7fa;
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00bcd4;
+    }
+
+    h3 {
+      color: #26c6da;
+      border-bottom: 2px solid #00acc1;
+      padding-bottom: 6px;
+      margin-top: 30px;
+    }
+
+    .section {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00acc1aa;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #00e5ff;
+    }
+
+    .qa {
+      margin-bottom: 20px;
+    }
+
+    .qa p {
+      margin: 6px 0;
+    }
+
+    .question {
+      color: #00e5ff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .answer {
+      color: #e0f7fa;
+      padding-left: 10px;
+    }
+
+    .note-box {
+      background-color: #263238;
+      border-left: 5px solid #00bfa5;
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #00e5ff, #1de9b6);
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 10px 30px 0;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00e5ff;
+    }
+
+    .top-btns {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-btns">
+    <a href="/Users/mdtok/8th_saiba/chapters.html" class="btn">📚 Go to Study Page</a>
+    <a href="day4.html" class="btn">🔙 Back to Chapter</a>
+  </div>
+
+  <h1>Class 8 Science</h1>
+  <h2>Chapter 4 – Heat 🔥</h2>
+
+  <div class="section">
+    <h3>❓ Important Questions and Answers</h3>
+
+    <div class="qa">
+      <p class="question">1. What is heat?</p>
+      <p class="answer">Heat is a form of energy that causes a rise in temperature and can be transferred from one body to another.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">2. What is temperature?</p>
+      <p class="answer">Temperature is a measure of how hot or cold a body is, usually measured using a thermometer.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">3. Define conduction with example.</p>
+      <p class="answer">Conduction is the transfer of heat through a solid without the movement of the solid itself. Example: heating one end of a metal rod.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">4. What is convection?</p>
+      <p class="answer">Convection is the transfer of heat through liquids or gases by the movement of the heated particles from one place to another.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">5. What is radiation?</p>
+      <p class="answer">Radiation is the transfer of heat through empty space by electromagnetic waves, like the heat from the Sun.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">6. What is the role of a thermometer?</p>
+      <p class="answer">A thermometer measures temperature using a calibrated scale.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">7. What is expansion and contraction?</p>
+      <p class="answer">Expansion is the increase in size of substances on heating, while contraction is the decrease in size on cooling.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">8. Why do bridges have expansion joints?</p>
+      <p class="answer">To allow the bridge materials to expand and contract with temperature changes without causing damage.</p>
+    </div>
+
+    <div class="qa">
+      <p class="question">9. What is specific heat capacity?</p>
+      <p class="answer">It is the amount of heat required to raise the temperature of 1 kg of a substance by 1°C.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>📝 Extra Notes / Definitions</h3>
+
+    <div class="note-box"><strong>Heat:</strong> Energy transferred due to temperature difference.</div>
+    <div class="note-box"><strong>Conduction:</strong> Heat transfer through solids.</div>
+    <div class="note-box"><strong>Convection:</strong> Heat transfer through fluid movement.</div>
+    <div class="note-box"><strong>Radiation:</strong> Heat transfer through electromagnetic waves.</div>
+    <div class="note-box"><strong>Expansion:</strong> Increase in size on heating.</div>
+    <div class="note-box"><strong>Contraction:</strong> Decrease in size on cooling.</div>
+    <div class="note-box"><strong>Specific Heat Capacity:</strong> Heat required to raise 1 kg of substance by 1°C.</div>
+    <div class="note-box"><strong>Thermometer:</strong> Device used to measure temperature.</div>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button onclick="scrollToTop()" id="topBtn" title="Go to top" class="btn">⬆️ Top</button>
+
+  <script>
+    // Toggle answers on question click
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.querySelectorAll('.qa');
+
+      questions.forEach(qa => {
+        const questionEl = qa.querySelector('.question');
+        const answerEl = qa.querySelector('.answer');
+
+        if (questionEl && answerEl) {
+          answerEl.style.display = 'none'; // Hide initially
+
+          questionEl.addEventListener('click', () => {
+            answerEl.style.display = (answerEl.style.display === 'none') ? 'block' : 'none';
+          });
+        }
+      });
+    });
+
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide scroll-to-top button
+    window.onscroll = function () {
+      const topBtn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>

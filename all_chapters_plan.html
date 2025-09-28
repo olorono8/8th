@@ -1,180 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Class 8 Study Plan - NCERT</title>
-  <style>
-    .chapter-btn, .link-btn {
-        display: block;
-        margin: 8px 0;
-        padding: 10px 18px;
-        background: linear-gradient(135deg, #1de9b6, #00e5ff);
-        border: none;
-        border-radius: 30px;
-        font-weight: bold;
-        font-size: 0.95rem;
-        cursor: pointer;
-        color: #0a0a0a;
-        text-decoration: none;
-        box-shadow: 0 0 15px rgba(0,229,255,0.4);
-        transition: all 0.3s ease;
-        width: fit-content;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponents & Powers - 8th Class</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .chapter-btn:hover, .link-btn:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 25px rgba(0,229,255,0.8);
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      padding: 20px;
-      line-height: 1.6;
-    }
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 25px;
-    }
+        header {
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+        }
 
-    table, th, td {
-      border: 1px solid #ccc;
-    }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
-    th {
-      background-color: #e3f2fd;
-    }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px;
+        }
 
-    .section {
-      background-color: #eef7fa;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-left: 5px solid #3498db;
-    }
+        .menu-button {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
 
-    ul {
-      margin: 10px 0;
-      padding-left: 20px;
-    }
+        .menu-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
 
-    .checklist td {
-      width: 50%;
-    }
-  </style>
+        .menu-button:hover::before {
+            left: 100%;
+        }
+
+        .menu-button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-button i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-button:hover i {
+            transform: scale(1.2);
+        }
+
+        .menu-button h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .menu-button p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .button-1 {
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: white;
+        }
+
+        .button-1 h3, .button-1 p {
+            color: white;
+        }
+
+        .button-2 {
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            color: white;
+        }
+
+        .button-2 h3, .button-2 p {
+            color: white;
+        }
+
+        .button-3 {
+            background: linear-gradient(135deg, #2ecc71, #1abc9c);
+            color: white;
+        }
+
+        .button-3 h3, .button-3 p {
+            color: white;
+        }
+
+        .button-4 {
+            background: linear-gradient(135deg, #9b59b6, #34495e);
+            color: white;
+        }
+
+        .button-4 h3, .button-4 p {
+            color: white;
+        }
+
+        .content-section {
+            padding: 40px;
+            display: none;
+        }
+
+        .active-section {
+            display: block;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        h3 {
+            color: #3498db;
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+        }
+
+        .example {
+            background-color: #fff3e0;
+            border-left: 5px solid #e67e22;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz {
+            background-color: #e0f7fa;
+            border-left: 5px solid #0097a7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        input[type="number"] {
+            width: 70px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .back-button {
+            background-color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <a href="index.html" class="chapter-btn"> back</a>
+    <div class="container">
+        <header>
+            <h1>Exponents & Powers - 8th Class</h1>
+            <p class="subtitle">Master the fundamentals of exponents with interactive examples and quizzes</p>
+        </header>
+        
+        <div class="menu-grid">
+            <div class="menu-button button-1" onclick="showSection('intro')">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Introduction</h3>
+                <p>Learn what exponents are and how they work</p>
+            </div>
+            
+            <div class="menu-button button-2" onclick="showSection('rules')">
+                <i class="fas fa-book"></i>
+                <h3>Rules of Exponents</h3>
+                <p>Explore the fundamental rules with examples</p>
+            </div>
+            
+            <div class="menu-button button-3" onclick="showSection('examples')">
+                <i class="fas fa-calculator"></i>
+                <h3>Quick Examples</h3>
+                <p>Practice with common exponent problems</p>
+            </div>
+            
+            <div class="menu-button button-4" onclick="showSection('quiz')">
+                <i class="fas fa-question-circle"></i>
+                <h3>Interactive Quiz</h3>
+                <p>Test your knowledge with fun exercises</p>
+            </div>
+        </div>
 
-  <h1>🎯 Class 8 NCERT Study Plan</h1>
-  <p>Complete and smart study plan to help you become a topper in Class 8!</p>
+        <!-- Introduction Section -->
+        <div id="intro" class="content-section">
+            <button class="back-button" onclick="showSection('menu')"><i class="fas fa-arrow-left"></i> Back to Menu</button>
+            
+            <h2>1. What is an Exponent?</h2>
+            <p>An exponent tells us how many times a number is multiplied by itself.</p>
+            <p>Example: <strong>2³</strong> means 2 × 2 × 2 = 8</p>
 
-  <div class="section">
-    <h2>🗓️ Weekly Time Table</h2>
-    <table>
-      <tr>
-        <th>Day</th>
-        <th>Morning</th>
-        <th>Evening</th>
-        <th>Notes</th>
-      </tr>
-      <tr>
-        <td>Monday</td>
-        <td>Maths</td>
-        <td>Science</td>
-        <td>Practice problems</td>
-      </tr>
-      <tr>
-        <td>Tuesday</td>
-        <td>English</td>
-        <td>Social Science</td>
-        <td>Focus on writing + maps</td>
-      </tr>
-      <tr>
-        <td>Wednesday</td>
-        <td>Science</td>
-        <td>Hindi</td>
-        <td>Concepts + grammar</td>
-      </tr>
-      <tr>
-        <td>Thursday</td>
-        <td>Maths</td>
-        <td>English</td>
-        <td>Writing & Lit.</td>
-      </tr>
-      <tr>
-        <td>Friday</td>
-        <td>Social Science</td>
-        <td>Hindi</td>
-        <td>History / Civics</td>
-      </tr>
-      <tr>
-        <td>Saturday</td>
-        <td>Science</td>
-        <td>Maths</td>
-        <td>Practice weak areas</td>
-      </tr>
-      <tr>
-        <td>Sunday</td>
-        <td colspan="2">📚 Weekly Revision + Mock Tests</td>
-        <td>Revise & test yourself</td>
-      </tr>
-    </table>
-  </div>
+            <div class="example">
+                <h3>Example:</h3>
+                <p>5² = 5 × 5 = 25</p>
+                <p>3⁴ = 3 × 3 × 3 × 3 = 81</p>
+            </div>
 
-  <div class="section">
-    <h2>📅 Monthly Subject Focus</h2>
-    <ul>
-      <li><strong>Month 1–2:</strong> Complete all chapters (Reading + Notes)</li>
-      <li><strong>Month 3–4:</strong> Revise and solve NCERT exercises</li>
-      <li><strong>Month 5:</strong> Practice with sample papers</li>
-      <li><strong>Month 6:</strong> Full syllabus revision + Mock Tests</li>
-    </ul>
-  </div>
+            <h2>2. Parts of a Power</h2>
+            <ul>
+                <li><strong>Base:</strong> The number being multiplied (2 in 2³)</li>
+                <li><strong>Exponent (Power):</strong> How many times the base is multiplied (3 in 2³)</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>📌 Subject-Wise Tips</h2>
-    <ul>
-      <li><strong>Maths:</strong> Daily practice, revise formulas, do 2 sample papers/month</li>
-      <li><strong>Science:</strong> Revise definitions, draw diagrams, flashcards</li>
-      <li><strong>Social Science:</strong> Timeline for history, map marking, real-life Civics</li>
-      <li><strong>English:</strong> Reading aloud, writing letters, summaries</li>
-      <li><strong>Hindi:</strong> Grammar practice + learn short answers</li>
-    </ul>
-  </div>
+        <!-- Rules Section -->
+        <div id="rules" class="content-section">
+            <button class="back-button" onclick="showSection('menu')"><i class="fas fa-arrow-left"></i> Back to Menu</button>
+            
+            <h2>Rules of Exponents</h2>
+            
+            <div class="example">
+                <h3>Rule 1: Multiplying Powers with Same Base</h3>
+                <p>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></p>
+                <p>Example: 2² × 2³ = 2<sup>2+3</sup> = 2⁵ = 32</p>
+            </div>
 
-  <div class="section">
-    <h2>✅ Daily Checklist</h2>
-    <table class="checklist">
-      <tr><td>📖 Read NCERT Chapter</td><td>⬜</td></tr>
-      <tr><td>✍️ Solve Exercises</td><td>⬜</td></tr>
-      <tr><td>🧠 Revise Notes</td><td>⬜</td></tr>
-      <tr><td>🔄 Flashcards / Keywords</td><td>⬜</td></tr>
-      <tr><td>🧪 Practice Questions</td><td>⬜</td></tr>
-      <tr><td>🗓️ Mark Completed on Calendar</td><td>⬜</td></tr>
-    </table>
-  </div>
+            <div class="example">
+                <h3>Rule 2: Dividing Powers with Same Base</h3>
+                <p>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m-n</sup></p>
+                <p>Example: 5⁴ ÷ 5² = 5<sup>4-2</sup> = 5² = 25</p>
+            </div>
 
-  <div class="section">
-    <h2>🎁 Topper Tips</h2>
-    <ul>
-      <li>🎯 Stick to the NCERT book – it's the main key to scoring high</li>
-      <li>📅 Make a calendar and track your progress</li>
-      <li>🧠 Teach others – helps you learn faster</li>
-      <li>🚫 Avoid distractions (no phone during study)</li>
-      <li>🧘 Stay calm, take breaks and believe in yourself!</li>
-    </ul>
-  </div>
+            <div class="example">
+                <h3>Rule 3: Power of a Power</h3>
+                <p>(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></p>
+                <p>Example: (3²)³ = 3<sup>2×3</sup> = 3⁶ = 729</p>
+            </div>
 
+            <div class="example">
+                <h3>Rule 4: Power of a Product</h3>
+                <p>(ab)<sup>n</sup> = a<sup>n</sup> × b<sup>n</sup></p>
+                <p>Example: (2×3)² = 2² × 3² = 4 × 9 = 36</p>
+            </div>
+
+            <div class="example">
+                <h3>Rule 5: Power of a Fraction</h3>
+                <p>(a/b)<sup>n</sup> = a<sup>n</sup> / b<sup>n</sup></p>
+                <p>Example: (2/3)² = 2² / 3² = 4/9</p>
+            </div>
+
+            <div class="example">
+                <h3>Rule 6: Zero Exponent</h3>
+                <p>a⁰ = 1 (a ≠ 0)</p>
+                <p>Example: 7⁰ = 1</p>
+            </div>
+
+            <div class="example">
+                <h3>Rule 7: Negative Exponent</h3>
+                <p>a⁻ⁿ = 1 / aⁿ</p>
+                <p>Example: 2⁻³ = 1 / 2³ = 1/8</p>
+            </div>
+        </div>
+
+        <!-- Examples Section -->
+        <div id="examples" class="content-section">
+            <button class="back-button" onclick="showSection('menu')"><i class="fas fa-arrow-left"></i> Back to Menu</button>
+            
+            <h2>Quick Examples</h2>
+            <ul>
+                <li>4³ = 64</li>
+                <li>10² = 100</li>
+                <li>(2 × 5)² = 2² × 5² = 100</li>
+                <li>3⁰ = 1</li>
+                <li>5⁻² = 1/25</li>
+                <li>7³ = 343</li>
+                <li>2⁴ × 2² = 2⁶ = 64</li>
+                <li>(4²)² = 4⁴ = 256</li>
+            </ul>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz" class="content-section">
+            <button class="back-button" onclick="showSection('menu')"><i class="fas fa-arrow-left"></i> Back to Menu</button>
+            
+            <h2>Interactive Quiz</h2>
+            
+            <div class="quiz">
+                <p>Question 1: What is 2³ × 2² ?</p>
+                <input type="number" id="q1">
+                <button onclick="checkQ1()">Check Answer</button>
+                <p id="a1"></p>
+            </div>
+
+            <div class="quiz">
+                <p>Question 2: What is (3²)³ ?</p>
+                <input type="number" id="q2">
+                <button onclick="checkQ2()">Check Answer</button>
+                <p id="a2"></p>
+            </div>
+
+            <div class="quiz">
+                <p>Question 3: What is 5⁴ ÷ 5² ?</p>
+                <input type="number" id="q3">
+                <button onclick="checkQ3()">Check Answer</button>
+                <p id="a3"></p>
+            </div>
+
+            <div class="quiz">
+                <p>Question 4: What is 7⁰ ?</p>
+                <input type="number" id="q4">
+                <button onclick="checkQ4()">Check Answer</button>
+                <p id="a4"></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Exponents & Powers Learning Module &copy; 2023 | Designed for 8th Grade Mathematics</p>
+        </footer>
+    </div>
+
+    <script>
+        // Show the menu by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('menu');
+        });
+
+        function showSection(sectionId) {
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active-section');
+            });
+            
+            // Show the selected section
+            if (sectionId === 'menu') {
+                document.querySelector('.menu-grid').style.display = 'grid';
+            } else {
+                document.querySelector('.menu-grid').style.display = 'none';
+                document.getElementById(sectionId).classList.add('active-section');
+            }
+        }
+
+        function checkQ1() {
+            let ans = document.getElementById('q1').value;
+            if(ans == 32) {
+                document.getElementById('a1').innerHTML = "<span style='color:green'>Correct! 2³ × 2² = 2<sup>3+2</sup> = 2⁵ = 32</span>";
+            } else {
+                document.getElementById('a1').innerHTML = "<span style='color:red'>Try again! Remember: a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></span>";
+            }
+        }
+        
+        function checkQ2() {
+            let ans = document.getElementById('q2').value;
+            if(ans == 729) {
+                document.getElementById('a2').innerHTML = "<span style='color:green'>Correct! (3²)³ = 3<sup>2×3</sup> = 3⁶ = 729</span>";
+            } else {
+                document.getElementById('a2').innerHTML = "<span style='color:red'>Try again! Remember: (a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></span>";
+            }
+        }
+        
+        function checkQ3() {
+            let ans = document.getElementById('q3').value;
+            if(ans == 25) {
+                document.getElementById('a3').innerHTML = "<span style='color:green'>Correct! 5⁴ ÷ 5² = 5<sup>4-2</sup> = 5² = 25</span>";
+            } else {
+                document.getElementById('a3').innerHTML = "<span style='color:red'>Try again! Remember: a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m-n</sup></span>";
+            }
+        }
+        
+        function checkQ4() {
+            let ans = document.getElementById('q4').value;
+            if(ans == 1) {
+                document.getElementById('a4').innerHTML = "<span style='color:green'>Correct! Any non-zero number raised to the power of 0 equals 1</span>";
+            } else {
+                document.getElementById('a4').innerHTML = "<span style='color:red'>Try again! Remember: a⁰ = 1 (when a ≠ 0)</span>";
+            }
+        }
+    </script>
 </body>
 </html>
